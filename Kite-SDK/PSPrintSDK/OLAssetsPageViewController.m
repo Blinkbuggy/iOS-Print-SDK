@@ -173,13 +173,13 @@
     
     [center addObserver:self
                selector:@selector(scrollViewTapped:)
-                   name:CTAssetScrollViewTappedNotification
+                   name:OLAssetScrollViewTappedNotification
                  object:nil];
 }
 
 - (void)removeNotificationObserver
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:CTAssetScrollViewTappedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:OLAssetScrollViewTappedNotification object:nil];
 }
 
 

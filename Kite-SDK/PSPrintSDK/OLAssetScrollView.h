@@ -31,7 +31,7 @@
 
 
 
-extern NSString * const CTAssetScrollViewTappedNotification;
+extern NSString * const OLAssetScrollViewTappedNotification;
 
 
 

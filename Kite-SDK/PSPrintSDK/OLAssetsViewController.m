@@ -38,8 +38,8 @@
 
 
 
-NSString * const CTAssetsViewCellIdentifier = @"CTAssetsViewCellIdentifier";
-NSString * const CTAssetsSupplementaryViewIdentifier = @"CTAssetsSupplementaryViewIdentifier";
+NSString * const OLAssetsViewCellIdentifier = @"OLAssetsViewCellIdentifier";
+NSString * const OLAssetsSupplementaryViewIdentifier = @"OLAssetsSupplementaryViewIdentifier";
 
 
 
@@ -78,11 +78,11 @@ NSString * const CTAssetsSupplementaryViewIdentifier = @"CTAssetsSupplementaryVi
         self.collectionView.allowsMultipleSelection = YES;
         
         [self.collectionView registerClass:OLAssetsViewCell.class
-                forCellWithReuseIdentifier:CTAssetsViewCellIdentifier];
+                forCellWithReuseIdentifier:OLAssetsViewCellIdentifier];
         
         [self.collectionView registerClass:OLAssetsSupplementaryView.class
                 forSupplementaryViewOfKind:UICollectionElementKindSectionFooter
-                       withReuseIdentifier:CTAssetsSupplementaryViewIdentifier];
+                       withReuseIdentifier:OLAssetsSupplementaryViewIdentifier];
         
         self.preferredContentSize = CTAssetPickerPopoverContentSize;
     }
@@ -402,7 +402,7 @@ NSString * const CTAssetsSupplementaryViewIdentifier = @"CTAssetsSupplementaryVi
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     OLAssetsViewCell *cell =
-    [collectionView dequeueReusableCellWithReuseIdentifier:CTAssetsViewCellIdentifier
+    [collectionView dequeueReusableCellWithReuseIdentifier:OLAssetsViewCellIdentifier
                                               forIndexPath:indexPath];
     
     ALAsset *asset = [self.assets objectAtIndex:indexPath.row];
@@ -430,7 +430,7 @@ NSString * const CTAssetsSupplementaryViewIdentifier = @"CTAssetsSupplementaryVi
 {
     OLAssetsSupplementaryView *view =
     [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter
-                                       withReuseIdentifier:CTAssetsSupplementaryViewIdentifier
+                                       withReuseIdentifier:OLAssetsSupplementaryViewIdentifier
                                               forIndexPath:indexPath];
     
     [view bind:self.assets];

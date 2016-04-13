@@ -35,7 +35,7 @@
 
 
 
-NSString * const CTAssetScrollViewTappedNotification = @"CTAssetScrollViewTappedNotification";
+NSString * const OLAssetScrollViewTappedNotification = @"OLAssetScrollViewTappedNotification";
 
 
 
@@ -328,7 +328,7 @@ NSString * const CTAssetScrollViewTappedNotification = @"CTAssetScrollViewTapped
 
 - (void)handleTapping:(UITapGestureRecognizer *)recognizer
 {
-    [[NSNotificationCenter defaultCenter] postNotificationName:CTAssetScrollViewTappedNotification object:recognizer];
+    [[NSNotificationCenter defaultCenter] postNotificationName:OLAssetScrollViewTappedNotification object:recognizer];
     
     if (recognizer.numberOfTapsRequired == 2)
         [self toggleZooming:recognizer];
